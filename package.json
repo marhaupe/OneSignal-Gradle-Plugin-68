@@ -1,0 +1,35 @@
+{
+  "name": "onesignalissue",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "prestart": "adb reverse tcp:5678 tcp:5678 & adb reverse tcp:8081 tcp:8081",
+    "androidDev": "react-native run-android",
+    "start": "react-native start",
+    "test": "jest",
+    "react-devtools": "adb reverse tcp:8097 tcp:8097 && react-devtools"
+  },
+  "dependencies": {
+    "lottie-react-native": "2.5.0",
+    "react": "16.5.1",
+    "react-native": "0.57.1",
+    "react-native-admob": "2.0.0-beta.5",
+    "react-native-onesignal": "3.2.7"
+  },
+  "devDependencies": {
+    "babel-eslint": "8.2.3",
+    "babel-jest": "22.4.3",
+    "metro-react-native-babel-preset": "0.45.6",
+    "eslint": "4.19.1",
+    "eslint-plugin-classes": "0.1.1",
+    "eslint-plugin-import": "2.12.0",
+    "eslint-plugin-react": "7.8.2",
+    "eslint-plugin-react-native": "3.2.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFiles": [
+      "./jest-env.js"
+    ]
+  }
+}
